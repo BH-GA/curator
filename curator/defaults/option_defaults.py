@@ -254,7 +254,7 @@ def skip_repo_fs_check():
     return {Optional('skip_repo_fs_check', default=False): Any(bool, All(Any(*string_types), Boolean()))}
 
 def slices():
-    return {Optional('slices', default=1): Any(All(Coerce(int), Range(min=1, max=500)), None)}
+    return {Optional('slices', default='auto'): Any(All(Coerce(int), Range(min=1, max=500)), None)}
 
 def timeout(action):
     # if action == 'reindex':
